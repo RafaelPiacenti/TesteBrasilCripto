@@ -49,23 +49,34 @@ class FavoritesPage extends StatelessWidget {
               itemCount: state.favorites.length,
               itemBuilder: (context, index) {
                 final crypto = state.favorites[index];
-                return ListTile(
-                  title: Text(
-                    '${crypto.name} (${crypto.symbol.toUpperCase()})',
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Card(
+                    child: ListTile(
+                      title: Text(
+                        '${crypto.name} (${crypto.symbol.toUpperCase()})',
+                      ),
+                      subtitle: Text(
+                        'Preço: ${CurrencyUtil.formatToUSD(crypto.price)}',
+                      ),
+                      leading: IconButton(
+                        icon: const Icon(Icons.delete_outline),
+                        onPressed: () => _confirmRemoval(context, crypto),
+                      ),
+                      trailing: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Theme.of(context).primaryColor,
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => DetailsPage(crypto.id),
+                          ),
+                        );
+                      },
+                    ),
                   ),
-                  subtitle: Text(
-                    'Preço: ${CurrencyUtil.formatToUSD(crypto.price)}',
-                  ),
-                  trailing: IconButton(
-                    icon: const Icon(Icons.delete_outline),
-                    onPressed: () => _confirmRemoval(context, crypto),
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => DetailsPage(crypto.id)),
-                    );
-                  },
                 );
               },
             );
