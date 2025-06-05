@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:teste_tecnico_rafael_piacenti_grupo_adriano_corbuccio/app.dart';
+import 'package:teste_tecnico_rafael_piacenti_grupo_adriano_cobuccio/app.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

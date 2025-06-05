@@ -6,18 +6,18 @@
     "configurations": [
         
         {
-            "name": "teste_tecnico_rafael_piacenti_grupo_adriano_corbuccio",
+            "name": "teste_tecnico_rafael_piacenti_grupo_adriano_cobuccio",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "teste_tecnico_rafael_piacenti_grupo_adriano_corbuccio (profile mode)",
+            "name": "teste_tecnico_rafael_piacenti_grupo_adriano_cobuccio (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "teste_tecnico_rafael_piacenti_grupo_adriano_corbuccio (release mode)",
+            "name": "teste_tecnico_rafael_piacenti_grupo_adriano_cobuccio (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

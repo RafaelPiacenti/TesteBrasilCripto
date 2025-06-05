@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.teste_tecnico_rafael_piacenti_grupo_adriano_corbuccio"
+    namespace = "com.example.teste_tecnico_rafael_piacenti_grupo_adriano_cobuccio"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.2.12479018"
 
@@ -21,7 +21,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.teste_tecnico_rafael_piacenti_grupo_adriano_corbuccio"
+        applicationId = "com.example.teste_tecnico_rafael_piacenti_grupo_adriano_cobuccio"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

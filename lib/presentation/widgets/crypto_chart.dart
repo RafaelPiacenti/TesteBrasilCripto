@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:teste_tecnico_rafael_piacenti_grupo_adriano_corbuccio/core/utils/currency_formatter.dart';
+import 'package:teste_tecnico_rafael_piacenti_grupo_adriano_cobuccio/core/utils/currency_formatter.dart';
 
 class CryptoChart extends StatelessWidget {
   final List<double> prices;
