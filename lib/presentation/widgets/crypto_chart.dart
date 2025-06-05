@@ -69,7 +69,7 @@ class CryptoChart extends StatelessWidget {
                 reservedSize: 48,
                 interval: (maxY - minY) / 4,
                 getTitlesWidget: (value, _) => AutoSizeText(
-                  CurrencyUtil.formatToUSD(value.truncateToDouble()),
+                  value.toStringAsFixed(2),
                   maxLines: 1,
                   minFontSize: 8,
                 ),
