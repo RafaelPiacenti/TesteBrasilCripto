@@ -13,6 +13,9 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   Future<void> _onSearch(SearchCryptos event, Emitter<HomeState> emit) async {
+    //Evita execuções sequenciais desnecessárias do evento de busca
+    if (state is HomeLoading) return;
+
     emit(HomeLoading());
 
     try {

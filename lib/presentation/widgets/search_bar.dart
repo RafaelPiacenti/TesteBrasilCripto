@@ -22,12 +22,11 @@ class SearchBarWidget extends StatelessWidget {
               decoration: const InputDecoration(
                 hintText: "Buscar criptomoeda...",
                 border: OutlineInputBorder(),
+                suffixIcon: Icon(Icons.search),
               ),
               onSubmitted: (_) => onSearch(),
             ),
           ),
-          const SizedBox(width: 8),
-          ElevatedButton(onPressed: onSearch, child: const Icon(Icons.search)),
         ],
       ),
     );

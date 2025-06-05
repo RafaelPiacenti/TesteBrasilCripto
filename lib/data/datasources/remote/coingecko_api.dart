@@ -11,7 +11,10 @@ class CoinGeckoApi {
       '$_baseUrl/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false',
     );
 
-    final response = await http.get(uri);
+    final response = await http.get(
+      uri,
+      headers: {'User-Agent': 'BrasilCripto/1.0'},
+    );
 
     if (response.statusCode == 200) {
       final List data = json.decode(response.body);
@@ -34,7 +37,10 @@ class CoinGeckoApi {
       '$_baseUrl/coins/$id?localization=true&sparkline=true',
     );
 
-    final response = await http.get(uri);
+    final response = await http.get(
+      uri,
+      headers: {'User-Agent': 'BrasilCriptoApp/1.0'},
+    );
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
