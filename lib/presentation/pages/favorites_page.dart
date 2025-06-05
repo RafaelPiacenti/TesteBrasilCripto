@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../core/utils/currency_formatter.dart';
 import '../../data/models/crypto_model.dart';
 import '../viewmodels/favorites/favorites_bloc.dart';
 import 'details_page.dart';
@@ -52,7 +53,9 @@ class FavoritesPage extends StatelessWidget {
                   title: Text(
                     '${crypto.name} (${crypto.symbol.toUpperCase()})',
                   ),
-                  subtitle: Text('Preço: \$${crypto.price.toStringAsFixed(2)}'),
+                  subtitle: Text(
+                    'Preço: ${CurrencyUtil.formatToUSD(crypto.price)}',
+                  ),
                   trailing: IconButton(
                     icon: const Icon(Icons.delete_outline),
                     onPressed: () => _confirmRemoval(context, crypto),

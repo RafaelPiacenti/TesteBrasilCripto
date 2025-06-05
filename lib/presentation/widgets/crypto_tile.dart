@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../domain/entities/crypto_entity.dart';
+import '../../core/utils/currency_formatter.dart';
 
 class CryptoTile extends StatelessWidget {
   final CryptoEntity crypto;
@@ -23,7 +24,7 @@ class CryptoTile extends StatelessWidget {
         child: ListTile(
           onTap: onTap,
           title: Text('${crypto.name} (${crypto.symbol.toUpperCase()})'),
-          subtitle: Text('Preço: \$${crypto.price.toStringAsFixed(2)}'),
+          subtitle: Text('Preço: ${CurrencyUtil.formatToUSD(crypto.price)}'),
 
           leading: IconButton(
             icon: Icon(

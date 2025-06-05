@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../core/utils/currency_formatter.dart';
 import '../viewmodels/details/details_bloc.dart';
 import '../widgets/crypto_chart.dart';
 
@@ -32,11 +33,13 @@ class DetailsPage extends StatelessWidget {
                       '${c.name} (${c.symbol.toUpperCase()})',
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
-                    Text('Preço atual: \$${c.price.toStringAsFixed(2)}'),
+                    Text('Preço atual: ${CurrencyUtil.formatToUSD(c.price)}'),
                     Text(
                       'Variação 24h: ${c.changePercent.toStringAsFixed(2)}%',
                     ),
-                    Text('Market Cap: \$${c.marketCap.toStringAsFixed(0)}'),
+                    Text(
+                      'Capitalização de mercado: ${CurrencyUtil.formatToUSD(c.marketCap)}',
+                    ),
 
                     if (c.sparkline != null && c.sparkline!.isNotEmpty) ...[
                       const Text("Variação nos últimos 7 dias:"),
@@ -54,7 +57,7 @@ class DetailsPage extends StatelessWidget {
                               horizontal: 16,
                               vertical: 8,
                             ),
-                            child: Text(
+                            child: SelectableText(
                               c.description!,
                               style: const TextStyle(fontSize: 14),
                               textAlign: TextAlign.justify,
