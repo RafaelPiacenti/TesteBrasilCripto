@@ -1,16 +1,13 @@
-# teste_tecnico_rafael_piacenti_grupo_adriano_corbuccio
+# Flutter - BrasilCard Private  
+## Desafio Técnico - BrasilCripto
 
-A new Flutter project.
+Este projeto foi desenvolvido utilizando a versão estável do Flutter **3.32.0**.
 
-## Getting Started
+### 🗂 Estrutura de Pastas
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **core/**: Utilitários e funcionalidades transversais usadas em toda a aplicação.
+- **data/**: Camada de implementação. Contém chamadas de API (`datasources`), modelos (`models`) e implementação dos repositórios (`repositories`).
+- **domain/**: Camada de regras de negócio. Define entidades puras, contratos de repositórios e casos de uso.
+- **presentation/**: Camada de UI. Inclui viewmodels (lógica de estado), páginas e widgets reutilizáveis.
+- **services/**: Serviços auxiliares como persistência local (ex: favoritos via `SharedPreferences`).
+- **main.dart / app.dart**: Entry point e configuração de rotas/temas.
