@@ -39,7 +39,7 @@ class CoinGeckoApi {
 
     final response = await http.get(
       uri,
-      headers: {'User-Agent': 'BrasilCriptoApp/1.0'},
+      headers: {'User-Agent': 'BrasilCripto/1.0'},
     );
 
     if (response.statusCode == 200) {
